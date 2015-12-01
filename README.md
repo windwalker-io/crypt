@@ -95,7 +95,7 @@ $bool = $crypt->verify('My Text', $encrypted, 'My private key'); // True
 Get the plain text back:
 
 ``` php
-$crypt = new Crypt(new BlowfishCipher, 'My private key');
+$crypt = new Crypt(new CipherBlowfish, 'My private key');
 
 $encrypted = $crypt->encrypt('My Text');
 
