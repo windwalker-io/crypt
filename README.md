@@ -86,7 +86,7 @@ as default cipher, it is a native PHP implementation of AES by [aes.class.php](h
 use Windwalker\Crypt\Cipher\BlowfishCipher;
 use Windwalker\Crypt\Crypt;
 
-$crypt = new Crypt(new BlowfishCipher, 'My private key');
+$crypt = new Crypt(new CipherBlowfish, 'My private key');
 
 $encrypted = $crypt->encrypt('My Text');
 
@@ -96,7 +96,7 @@ $bool = $crypt->verify('My Text', $encrypted, 'My private key'); // True
 Get the plain text back:
 
 ``` php
-$crypt = new Crypt(new BlowfishCipher, 'My private key');
+$crypt = new Crypt(new CipherBlowfish, 'My private key');
 
 $encrypted = $crypt->encrypt('My Text');
 
